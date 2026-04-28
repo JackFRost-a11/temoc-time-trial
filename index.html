@@ -2,14 +2,59 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Website Template</title>
+	<meta name="viewport" content="width=device-width, initial scale=1.0"/>
+	<title>Temoc Time Trial</title>
+	<link href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 
-	<h1>Website Template</h1>
-	<p>Fork and use this template repo (a.k.a. "boilerplate") for any web project</p>
-	<img src="assets/img/cat.jpg" alt="">
+	<header id="header">
+    <div id="game-title">Temoc Time Trial</div>
+    <div class="hud">
+
+	<div class="hud-card">
+    	<div class="hud-label">Time</div>
+		<div class="hud-value" id="timer-val">0.00s</div>
+	</div>
+
+	<div class="hud-card">
+    	<div class="hud-label">Remaining</div>
+    	<div class="hud-value" id="remaining-val">10</div>
+    </div>
+
+	<div class="hud-card">
+        <div class="hud-label">Best</div>
+        <div class="hud-value" id="best-val">--</div>
+      </div>
+
+ </div>
+  </header>
+
+  <div id="arena"></div>
+  <div id="progress-wrap">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="overlay">
+
+    <div id="overlay-title">Temoc<br>Time Trial</div>
+    <div id="overlay-sub">
+      10 Temoc heads will appear across the screen.<br>
+      Click them all as fast as you can!
+    </div>
+
+	 <div id="result-box">
+      <div id="result-time">0.00s</div>
+      <div id="result-label">Your Time</div>
+      <div id="best-row">Best: <span id="best-result-val">--</span></div>
+    </div>
+
+	 <button id="start-btn">Press to Start</button>
+
+	</div>
+		
+  <img src="assets/img/Temoc Head.jpg" alt="">
 
 	<script src="./assets/js/main.js"></script>
 </body>
