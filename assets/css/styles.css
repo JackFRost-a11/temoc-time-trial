@@ -1,6 +1,6 @@
 /* styles.css */
 :root {
-  --mascot-image: url('Temoc Head.jpg');
+  --mascot-image: url('../img/temoc-head.jpg');
   --mascot-size:  90px;
 --bg:           #154734;
   --bg2:          #12121e;
