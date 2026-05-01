@@ -2,22 +2,15 @@
 
 const TOTAL_HEADS  = 10;
 const HEAD_SIZE    = 90;
-const MASCOT_EMOJI = '☄️';
+const MASCOT_EMOJI = '';
 const PADDING      = 20;
 
-// =========================================
-// GAME STATE
-// =========================================
 let startTime  = null;
 let timerFrame = null;
 let clicked    = 0;
 let bestTime   = null;
 let running    = false;
 
-// =========================================
-// DOM REFERENCES
-// Wait until the page is fully loaded
-// =========================================
 document.addEventListener('DOMContentLoaded', function () {
 
   const arena         = document.getElementById('arena');
@@ -32,10 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const bestResultVal = document.getElementById('best-result-val');
   const overlayTitle  = document.getElementById('overlay-title');
   const overlaySub    = document.getElementById('overlay-sub');
-
-  // =========================================
-  // UTILITY FUNCTIONS
-  // =========================================
 
   function formatTime(ms) {
     return (ms / 1000).toFixed(2) + 's';
@@ -97,9 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // =========================================
-  // TIMER
-  // =========================================
   function tickTimer() {
     if (!running) return;
     const elapsed = Date.now() - startTime;
@@ -107,9 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
     timerFrame = requestAnimationFrame(tickTimer);
   }
 
-  // =========================================
-  // BUILD HEADS
-  // =========================================
   function buildHeads() {
     arena.innerHTML = '';
     const positions = [];
@@ -130,9 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // =========================================
-  // HEAD CLICK
-  // =========================================
   function onHeadClick(e) {
     if (!running) return;
     const head = e.currentTarget;
@@ -154,9 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // =========================================
-  // GAME FLOW
-  // =========================================
   function startGame() {
     clicked  = 0;
     running  = true;
